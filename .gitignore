@@ -1,0 +1,6 @@
+*.pyc
+mini_sec_profile/data/*/*.html
+mini_sec_profile/data/*/*.txt
+mini_sec_profile/*.txt
+sqlite.db
+
