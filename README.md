@@ -16,7 +16,7 @@
 - collections
 	- OrderedDict有序字典
 - SQLite3增删改查
-	- replace vs update 
+	- replace vs update replace:在主键等唯一性约束条件存在时替换
 	- insert or ignore into
 	- execute vs executemany
 - 时间日期操作datetime
@@ -40,7 +40,9 @@
 ## Bugs
 1. sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 0, and there are 2 supplied
 	- 参数没绑定好，检查sql语句、参数值、参数类型
-2. 使用迭代器next()时，RuntimeError: generator raised StopIteration
+2. error:ValueError('parameters are of unsupported type')
+	- 参数类型有误，execute和executemany绑定的参数类型应为list或tuple
+3. 使用迭代器next()时，RuntimeError: generator raised StopIteration
 	- 多次next()导致数据越界
 
 ## 小技巧
